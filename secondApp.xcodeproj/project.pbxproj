@@ -14,6 +14,7 @@
 		4A320E2C1E0F1B760089B9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A320E2A1E0F1B760089B9C0 /* LaunchScreen.storyboard */; };
 		4A320E371E0F1B760089B9C0 /* secondAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A320E361E0F1B760089B9C0 /* secondAppTests.swift */; };
 		4A320E421E0F1B760089B9C0 /* secondAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A320E411E0F1B760089B9C0 /* secondAppUITests.swift */; };
+		4A320E4F1E0F2FDF0089B9C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A320E231E0F1B760089B9C0 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A320E4F1E0F2FDF0089B9C0 /* ViewController.swift in Sources */,
 				4A320E371E0F1B760089B9C0 /* secondAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +507,7 @@
 				4A320E481E0F1B760089B9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A320E491E0F1B760089B9C0 /* Build configuration list for PBXNativeTarget "secondAppTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +516,7 @@
 				4A320E4B1E0F1B760089B9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A320E4C1E0F1B760089B9C0 /* Build configuration list for PBXNativeTarget "secondAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +525,7 @@
 				4A320E4E1E0F1B760089B9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
