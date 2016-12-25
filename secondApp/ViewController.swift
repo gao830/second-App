@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     var images = [UIImageView]()
+    let MAX_SWIPE = 2
+    let MIN_SWIPE = 0
+    var current_swipe = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,25 @@ class ViewController: UIViewController {
         scroll.contentSize = CGSize(width: contentWidth, height: view.frame.size.height)
     }
 
+    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+        if (current_swipe < MAX_SWIPE && sender.direction == UISwipeGestureRecognizerDirection.left) {
+            print("left")
+            didSwipe(location: 1)
+            
+        }
+        
+        if (current_swipe > MIN_SWIPE && sender.direction == UISwipeGestureRecognizerDirection.right) {
+            print("right")
+            didSwipe(location: -1)
+            
+        }
+    }
+    
+    func didSwipe(location: Int) {
+        current_swipe = current_swipe + location
+        let point: CGPoint = CGPoint(x: scroll.frame.size.width * CGFloat(current_swipe), y: 0)
+        scroll.setContentOffset(point, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

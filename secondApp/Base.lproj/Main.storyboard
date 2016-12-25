@@ -38,8 +38,8 @@
                                     <constraint firstAttribute="height" constant="207" id="4hT-CK-xXc"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saF-sg-SXj">
-                                <rect key="frame" x="88" y="0.0" width="220" height="736"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saF-sg-SXj">
+                                <rect key="frame" x="97" y="0.0" width="220" height="736"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,21 +49,35 @@
                             <constraint firstItem="peP-dV-gcD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GWU-q1-m9y"/>
                             <constraint firstItem="UFD-Nk-JVE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-101" id="NoN-lr-vc8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="peP-dV-gcD" secondAttribute="bottom" id="W2O-4Y-dGi"/>
-                            <constraint firstItem="saF-sg-SXj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="csO-KW-Nlf"/>
+                            <constraint firstItem="saF-sg-SXj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="csO-KW-Nlf"/>
                             <constraint firstItem="saF-sg-SXj" firstAttribute="top" secondItem="peP-dV-gcD" secondAttribute="top" id="ksz-AC-cii"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UFD-Nk-JVE" secondAttribute="bottom" id="kyq-Sg-4Me"/>
                             <constraint firstAttribute="trailing" secondItem="peP-dV-gcD" secondAttribute="trailing" id="leS-lq-Mcc"/>
                             <constraint firstAttribute="trailing" secondItem="UFD-Nk-JVE" secondAttribute="trailing" constant="-84" id="mXR-PQ-PhT"/>
                             <constraint firstItem="1BL-wc-OVc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tpZ-wW-hvd"/>
-                            <constraint firstItem="saF-sg-SXj" firstAttribute="centerX" secondItem="UFD-Nk-JVE" secondAttribute="centerX" id="vzp-QE-NlZ"/>
+                            <constraint firstItem="saF-sg-SXj" firstAttribute="centerX" secondItem="UFD-Nk-JVE" secondAttribute="centerX" constant="8.5" id="vzp-QE-NlZ"/>
                             <constraint firstItem="saF-sg-SXj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="wDG-Bq-mnY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KR8-Gh-kQt" appends="YES" id="NJA-fa-gf2"/>
+                            <outletCollection property="gestureRecognizers" destination="fcE-YK-ONe" appends="YES" id="ljm-aQ-lzt"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="scroll" destination="saF-sg-SXj" id="LdZ-6f-Ecs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="KR8-Gh-kQt" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="VaE-nA-GgO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="fcE-YK-ONe" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="Mp5-Qh-WoJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="122.28260869565219"/>
         </scene>
